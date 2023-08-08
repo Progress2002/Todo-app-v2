@@ -1,11 +1,14 @@
-import './App.css';
+import TodoList from './components/TodoList'
+import FormInput from './components/FormInput'
+import './App.css'
 
 function App() {
   return (
-    <div className="App">
-      <h1>Hello. I'm the App component</h1>
+    <div>
+      <FormInput />
+      <TodoList />
     </div>
-  );
+  )
 }
 
-export default App;
+export default App

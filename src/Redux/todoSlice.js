@@ -11,15 +11,15 @@ export const todoSlice = createSlice({
       localStorage.setItem('myTodo', JSON.stringify(state));
     },
     deleteTodo: (state, action) => {
-      const newState = state.filter((item) => item.id !== action.payload.id);
+      const newState = state.filter((item) => item.id !== action.payload);
       localStorage.setItem('myTodo', JSON.stringify(newState));
       return newState;
     },
     editTodo: (state, action) => {
-      const { id, updateTodo } = action.payload;
+      const { id, updatedTodo } = action.payload;
       const index = state.findIndex((item) => item.id === id);
       if (index !== -1) {
-        state[index].todo = updateTodo;
+        state[index].todo = updatedTodo;
         localStorage.setItem('myTodo', JSON.stringify(state));
       }
     },
