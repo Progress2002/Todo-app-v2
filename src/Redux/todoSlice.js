@@ -30,12 +30,17 @@ export const todoSlice = createSlice({
         state[index].completed = !state[index].completed;
         localStorage.setItem('myTodo', JSON.stringify(state));
       }
+    },
+    clearCompleted: (state) => {
+      const newState = state.filter((item) => item.completed !== true);
+      localStorage.setItem('myTodo', JSON.stringify(newState));
+      return newState;
     }
   },
 });
 
 export const allTodo = (state) => state.todo;
 
-export const { addTodo, deleteTodo, editTodo, toggleComplete } = todoSlice.actions;
+export const { addTodo, deleteTodo, editTodo, toggleComplete, clearCompleted } = todoSlice.actions;
 
 export default todoSlice.reducer;
