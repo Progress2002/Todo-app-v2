@@ -1,0 +1,118 @@
+.todo-container {
+  background-color: #043040;
+  height: 100%;
+  padding: 10px 5px 20px;
+}
+
+.todo-item {
+  color: rgb(228, 228, 228);
+  font-size: 18px;
+}
+
+.todo-container ul {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  height: 55%;
+  padding-bottom: 10px;
+  overflow-y: auto;
+  border-bottom: 1px dotted rgb(142, 142, 142);
+}
+
+.todo-container ul li,
+.todo-container ul li .details,
+.todo-container ul li .actions,
+.todo-container .footer-1,
+.todo-container .footer-2 {
+  display: flex;
+  gap: 20px;
+  align-items: center;
+}
+
+.todo-container ul li {
+  justify-content: space-between;
+  min-height: 45px;
+  border-top: 1px solid rgb(71, 71, 71);
+  border-bottom: 1px solid rgb(71, 71, 71);
+  padding: 0px 10px;
+}
+
+.todo-container ul li .details input[type="checkbox"] {
+  cursor: pointer;
+  appearance: none;
+  width: 25px;
+  height: 25px;
+  border-radius: 50%;
+  background-color: #bababa;
+  vertical-align: middle;
+  position: relative;
+  transition: all 0.3s all ease-in-out;
+}
+
+.todo-container ul li .details input[type="checkbox"]:checked {
+  background-color: #086789;
+}
+
+.todo-container ul li .details input[type="checkbox"]::before {
+  content: "\2713";
+  position: absolute;
+  top: 3px;
+  left: 4px;
+  font-size: 25px;
+  line-height: 15px;
+  transform: scale(0);
+  color: #fff;
+}
+
+.todo-container ul li .details input[type="checkbox"]:checked::before {
+  transform: scale(1);
+}
+
+.todo-container ul li .actions button {
+  background-color: inherit;
+  font-size: 20px;
+}
+
+.todo-container ul li .actions button.edit {
+  color: aliceblue;
+}
+
+.todo-container ul li .actions button.delete {
+  color: rgb(185, 65, 65);
+}
+
+.todo-container .footer-1 button,
+.todo-container .footer-2 button {
+  background: inherit;
+  outline: none;
+  font-size: 18px;
+  color: rgb(118, 118, 118);
+  padding-bottom: 1px;
+  font-weight: normal;
+}
+
+.todo-container .footer-1 {
+  justify-content: space-between;
+  margin: 15px 15px 10px;
+}
+
+.todo-container .footer-1 button:is(:hover, :focus),
+.todo-container .footer-2 button:is(:hover, :focus),
+.todo-container .footer-2 button.active {
+  color: #b0afaf;
+  border-bottom: 2px solid #b0afaf;
+  font-weight: bold;
+}
+
+.todo-container .footer-1 p {
+  color: rgb(113, 113, 113);
+  font-size: 16px;
+}
+
+.todo-container .footer-2 {
+  justify-content: center;
+  border: 1px solid gray;
+  padding: 7px;
+  margin: 0 30px;
+  gap: 50px;
+}

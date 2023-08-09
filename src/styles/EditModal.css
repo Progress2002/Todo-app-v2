@@ -1,5 +1,4 @@
 #EditModal {
-  /* display: none; */
   position: absolute;
   background-color: rgba(0, 0, 0, 0.7);
   top: 0;
@@ -120,10 +119,9 @@
   background-color: #021f29;
 }
 
-@media (min-width:765px) {
+@media (min-width: 765px) {
   .edit-container {
     background-color: aliceblue;
     width: 28rem;
   }
 }
-

@@ -1,0 +1,50 @@
+#addTodo-container {
+  display: flex;
+  background-color: #043040;
+  padding: 8px 10px;
+  gap: 5px;
+  margin-bottom: 30px;
+  border-radius: 10px 10px 0 0;
+}
+
+#addTodo-container input {
+  border: none;
+  border-radius: 5px;
+  background-color: inherit;
+  font-size: 20px;
+  padding: 0 6px;
+  color: #fff;
+  width: 95%;
+  height: 45px;
+  outline: none;
+}
+
+#addTodo-container input::placeholder {
+  color: gray;
+}
+
+#addTodo-container button {
+  background-color: #043040;
+  color: #fff;
+  border: 2px solid aliceblue;
+  padding: 0 10px;
+  border-radius: 50%;
+  font-weight: bolder;
+  transition: all 0.3s ease;
+  cursor: auto;
+}
+
+#addTodo-container button:disabled {
+  background-color: gray;
+  opacity: 0.4;
+  box-shadow: none;
+  transform: none;
+}
+
+#addTodo-container button.active:is(:hover, :focus) {
+  background-color: #03232f;
+  transform: scale(0.9);
+  font-weight: bolder;
+  box-shadow: 0px 0px 5px 3px aliceblue;
+  cursor: pointer;
+}
