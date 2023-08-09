@@ -1,0 +1,129 @@
+#EditModal {
+  /* display: none; */
+  position: absolute;
+  background-color: rgba(0, 0, 0, 0.7);
+  top: 0;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  overflow-y: hidden;
+  opacity: -5;
+  z-index: -10;
+}
+
+#EditModal.active {
+  display: flex;
+  opacity: 1;
+  z-index: 10;
+  animation: slideIN 0.3s linear both;
+}
+
+@keyframes slideIN {
+  from {
+    transform: scale(0);
+  }
+
+  to {
+    transform: scale(1);
+  }
+}
+
+.edit-container {
+  background-color: aliceblue;
+  background-image: url("https://www.transparenttextures.com/patterns/cubes.png");
+  width: 93%;
+  max-width: 28rem;
+  margin: auto;
+  height: 250px;
+  position: relative;
+  border-radius: 5px;
+}
+
+.edit-header {
+  display: flex;
+  align-items: center;
+  min-height: 50px;
+  background-color: #043040;
+  gap: 10px;
+  padding: 0 10px;
+  border-radius: 5px 5px 0 0;
+}
+
+.edit-header button {
+  background: none;
+  outline: none;
+  border: none;
+  border-radius: 50%;
+  padding: 8px 10px 6px;
+  font-size: 20px;
+  font-weight: bolder;
+  color: rgb(192, 192, 192);
+}
+
+.edit-header button:is(:hover, :focus) {
+  background-color: rgba(0, 0, 0, 0.4);
+}
+
+.edit-header h2 {
+  font-size: 17px;
+  color: #fff;
+}
+
+.original-text {
+  height: 55%;
+  margin: 0 20px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.original-text span {
+  background-color: #fff;
+  padding: 10px 15px;
+  border-radius: 10px;
+}
+
+.edit-container form {
+  position: absolute;
+  bottom: 0;
+  background-color: #cedee3;
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  height: 60px;
+  padding: 10px 10px;
+  border-radius: 0 0 5px 5px;
+}
+
+.edit-container form input {
+  width: 85%;
+  border: none;
+  font-size: 20px;
+  outline: none;
+  padding: 0 5px;
+  border-radius: 8px;
+}
+
+.edit-container form button {
+  border-radius: 50%;
+  font-size: 30px;
+  padding: 4px 4px 1px;
+  background-color: #043040;
+  color: #fff;
+  font-weight: bolder;
+  border: none;
+  box-shadow: 0px 0px 5px 2px rgba(0, 0, 0, 0.3);
+}
+
+.edit-container form button:is(:hover, :focus) {
+  background-color: #021f29;
+}
+
+@media (min-width:765px) {
+  .edit-container {
+    background-color: aliceblue;
+    width: 28rem;
+  }
+}
+
